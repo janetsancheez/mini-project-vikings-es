@@ -1,0 +1,65 @@
+
+
+
+# Davicente
+S
+class War():
+    def __init__(self):
+        self.vikingArmy=[]
+        self.saxonArmy=[]
+
+    def addViking(self, viking):
+        self.vikingArmy.append = viking
+            
+    def addSaxon(self, saxon):
+        self.saxonArmy.append = saxon
+    
+    def vikingAttack(self):
+        viking_soldier = random.choice(self.vikingArmy)
+        saxon_soldier = random.choice(self.saxonArmy)
+
+        damage = viking_soldier.strength
+        result = saxon_soldier.receiveDamage(damage)
+
+        self.saxonArmy = [saxon for saxon in self.saxonArmy if saxon.health > 0] ## eliminamos saxons muertos
+        
+    def saxonAttack(self):
+        viking_soldier = random.choice(self.vikingArmy)
+        saxon_soldier = random.choice(self.saxonArmy)
+
+        damage = saxon_soldier.strength
+        result = viking_soldier.receiveDamage(damage)
+
+        self.saxonArmy = [saxon for saxon in self.saxonArmy if saxon.health > 0] ## eliminamos vikingos muertos
+
+    def showStatus(self):
+        if len(self.saxonArmy) == 0 :
+            return print("¡Los Vikingos han ganado la guerra del siglo!")
+        elif len(self.vikingArmy) == 0:
+            return print("Los Sajones han luchado por sus vidas y sobreviven otro día...")
+        else:
+            return print("Los Vikingos y los Sajones todavía están en plena batalla.")
+    pass
+
+#yop
+class War2:
+
+    def __init__(self):
+        # your code here
+
+    def addViking(self, Viking):
+        # your code here
+    
+    def addSaxon(self, Saxon):
+        # your code here
+    
+    def vikingAttack(self):
+        # your code here
+
+    def saxonAttack(self):
+        # your code here
+
+    def showStatus(self):
+        # your code here
+
+    pass
